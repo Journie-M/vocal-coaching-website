@@ -1,65 +1,64 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Josefin_Sans } from "next/font/google";
+import type { Metadata } from "next";
+
+const josefinSans = Josefin_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+export const metadata: Metadata = {
+  title: "Journie Johnson Voice | Vocal Coach & Singing Teacher Los Angeles",
+  description: "Professional vocal coaching in Los Angeles. Experienced voice teacher offering singing lessons for all levels. Transform your voice. Book your free introductory lesson today!",
+};
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="flex flex-col md:flex-row h-[calc(100vh-4rem)] bg-white">
+      {/* Image - Mobile: circular and small, Desktop: left side */}
+      <div className="flex justify-center items-center py-8 md:py-0 md:relative md:w-1/2 md:bg-white">
+        <div className="relative w-48 h-48 md:w-full md:h-full">
+          <Image
+            src="/JournieSmileHeadshot.png"
+            alt="Journie Johnson"
+            fill
+            className="object-cover md:object-contain rounded-full md:rounded-none md:object-left"
+            priority
+          />
+        </div>
+      </div>
+
+      {/* Content */}
+      <div
+        className={`flex w-full md:w-1/2 items-center justify-center bg-white px-4 ${josefinSans.className}`}
+      >
+        <div className="p-8 max-w-xl">
+          <h2 className="text-4xl font-bold mb-6" style={{ color: "#065DDF" }}>
+            I&apos;m Journie, your new voice teacher!
+          </h2>
+          <p className="text-3xl text-black mb-8">
+            I work with singers of all levels to unlock their true vocal
+            potential. Book with me to start your singing journey today!
           </p>
+          <div className="flex flex-col items-center gap-4">
+            <Link
+              href="/book"
+              className="inline-block px-8 py-4 text-2xl font-bold text-white transition-colors hover:opacity-80"
+              style={{ backgroundColor: "#065DDF", borderRadius: "100px" }}
+            >
+              BOOK A FREE LESSON
+            </Link>
+            <Link
+              href="/about"
+              className="text-2xl transition-colors hover:text-black"
+              style={{ color: "#065DDF" }}
+            >
+              LEARN MORE
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </div>
     </div>
   );
 }
