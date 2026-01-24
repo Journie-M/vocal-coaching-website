@@ -85,12 +85,11 @@ export default function AboutPage() {
             </h2>
             <p className="leading-relaxed mb-4">
               I have a lifetime of performance experience with a background in
-              musical theater, and I am a working actor in Los Angeles. My voice
-              teacher training is from New York Vocal Coaching. I like to bring
-              techniques in from acting to help my students connect emotionally
-              with their music. Although my background is in musical theater, I
-              enjoy teaching all styles and our lessons will be aligned with
-              YOUR unique vocal goals!
+              musical theater, and training from New York Vocal Coaching. I like
+              to bring techniques in from acting to help my students connect
+              emotionally with their music. Although my background is in musical
+              theater, I enjoy teaching all styles and our lessons will be
+              aligned with YOUR unique vocal goals!
             </p>
           </section>
 
@@ -119,9 +118,9 @@ export default function AboutPage() {
               Location
             </h2>
             <p className="leading-relaxed">
-              I offer vocal coaching and singing lessons from Los Angeles,
-              California. I currently only offer lessons online, but in-person
-              lessons are coming soon!
+              Vocal coaching and singing lessons are online, available to
+              students from anywhere in the world. I am based in Los Angeles,
+              California, where in-person lessons are coming soon!
             </p>
           </section>
 
@@ -131,7 +130,7 @@ export default function AboutPage() {
               className="text-3xl font-bold mb-4"
               style={{ color: "#065DDF" }}
             >
-              Ready to Get Started?
+              Ready to start your vocal journey?
             </h2>
             <p className="text-xl mb-6">
               Book your free introductory lesson today and discover what your
