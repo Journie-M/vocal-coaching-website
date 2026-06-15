@@ -10,7 +10,8 @@ const josefinSans = Josefin_Sans({
 
 export const metadata: Metadata = {
   title: "Journie Johnson Voice | Vocal Coach & Singing Teacher Los Angeles",
-  description: "Professional vocal coaching in Los Angeles. Experienced voice teacher offering singing lessons for all levels. Transform your voice. Book your free introductory lesson today!",
+  description:
+    "Professional vocal coaching in Los Angeles. Experienced voice teacher offering singing lessons for all levels. Transform your voice. Book your free introductory lesson today!",
 };
 
 export default function Home() {
@@ -34,9 +35,9 @@ export default function Home() {
         className={`flex w-full md:w-1/2 items-center justify-center bg-white px-4 ${josefinSans.className}`}
       >
         <div className="p-8 max-w-xl">
-          <h2 className="text-4xl font-bold mb-6" style={{ color: "#065DDF" }}>
+          <h1 className="text-4xl font-bold mb-6" style={{ color: "#065DDF" }}>
             I&apos;m Journie, your new voice teacher!
-          </h2>
+          </h1>
           <p className="text-3xl text-black mb-8">
             I work with singers of all levels to unlock their true vocal
             potential. Book with me to start your singing journey today!
